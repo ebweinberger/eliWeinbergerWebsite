@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   flex: initial;
-  width: 450px;
+  width: 475px;
 }
 
 .name{
@@ -48,6 +48,7 @@
   display: flex;
   width: 900px;
   padding: 20px;
+  align-items: stretch;
 }
 
 .side-bar{
@@ -67,7 +68,7 @@
 hr{
   width: 90px;
   margin-bottom: 10px;
-  border-top: 1px solid #c2c2c2;
+  /* border-top: 1px solid #c2c2c2; */
 }
 .side-bar-item{
   font-size: 20px;
