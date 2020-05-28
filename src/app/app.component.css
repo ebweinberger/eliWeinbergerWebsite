@@ -57,7 +57,7 @@
   width: 200px;
   margin-right: 100px;
   /* background-color: grey; */
-  padding: 20px;
+  /* padding: 20px; */
   border-right: 1px solid #c2c2c2;
 }
 
@@ -74,7 +74,14 @@ hr{
   font-size: 20px;
   display: flex;
   padding: 10px 0 10px 20px;
+  transition: .7s;
 }
+
+.side-bar-item:hover{
+  background-color: #e6d5ed;
+  transition: .3s;
+}
+
 
 .component-container{
   /* background-color: red; */
