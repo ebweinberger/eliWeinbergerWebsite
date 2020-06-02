@@ -10,7 +10,7 @@
     "visitMessage": "Check out Vercel's website here"
   },
   "ThisSite":{
-    "about": "I built this website using Vercel and angular...",
+    "about": "This website is built in Angular 8 and hosted on Vercel. It has been pretty fun to learn Angular with this project and I am enjoying it a lot. I have learned how to use components, routes, services, and templates. There was a bit of a learning curve and I was intimidated at first by how many files there are in an empty project but after I learned how evrything is organized it makes perfect sense.",
     "visitURL": "https://github.com/ebweinberger/eliWeinbergerWebsite",
     "visitMessage": "Check out the repository on Github here"
   },
