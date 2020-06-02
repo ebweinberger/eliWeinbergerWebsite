@@ -1,0 +1,22 @@
+p{
+  line-height: 150%;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.visit{
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f4edfa;
+  margin-right: auto;
+  transition: .7s;
+}
+
+.visit:hover{
+  background-color: #e7e1ed;
+  transition: .3s;
+}

@@ -14,29 +14,36 @@ export class ProjectComponent implements OnInit {
 
   projectName: string;
   projectAbout: string;
-  PATH: string;
+  visitURL: string;
+  visitMessage: string;
 
   ngOnInit() {
-
-    this.PATH = this.route.snapshot.routeConfig.path
     switch (this.route.snapshot.routeConfig.path) {
       case "speckles":
         this.projectName = "Speckles";
         this.projectAbout = projectData.Speckles.about;
+        this.visitURL = projectData.Speckles.visitURL;
+        this.visitMessage = projectData.Speckles.visitMessage;
         break;
 
       case "vercel":
         this.projectName = "Vercel";
         this.projectAbout = projectData.Vercel.about;
+        this.visitURL = projectData.Vercel.visitURL;
+        this.visitMessage = projectData.Vercel.visitMessage;
         break;
 
       case "heatmap":
         this.projectName = "Social Media Heat Map";
         this.projectAbout = projectData.Heatmap.about;
+        this.visitURL = projectData.Heatmap.visitURL;
+        this.visitMessage = projectData.Heatmap.visitMessage;
         break;
       case "thissite":
         this.projectName = "This Website";
         this.projectAbout = projectData.ThisSite.about;
+        this.visitURL = projectData.ThisSite.visitURL;
+        this.visitMessage = projectData.ThisSite.visitMessage;
         break;
       default:
         this.projectName = "Not Found";

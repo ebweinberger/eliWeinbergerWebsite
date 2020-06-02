@@ -1,4 +1,6 @@
-<h1>{{ projectName }}</h1>
-<br>
-<p>{{ projectAbout }}</p>
-<p>{{ concept }}</p>
+<div class="content-container">
+  <h1>{{ projectName }}</h1>
+  <br>
+  <p>{{ projectAbout }}</p>
+  <a *ngIf="visitURL != undefined" href="{{ visitURL }}" class="visit"> {{ visitMessage }}</a>
+</div>

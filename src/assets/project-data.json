@@ -1,14 +1,20 @@
 {
   "Speckles":{
-    "about": "Speckles is a small artisitc project that I made to help me learn p5js and vercel. You can visit it at"
+    "about": "Speckles is a small artisitc project that I made to help me learn p5js and Vercel. p5js is a JavaScript library with a focus on creative use. I plan to use this libary to make an attractive frontend for the social media heat map that I am making. Vercel is a platform that let me host the static webpage easily. I plan to use it for future projects so this was a good introduction to it.",
+    "visitURL": "https://speckles.now.sh",
+    "visitMessage": "Check out Speckles here"
   },
   "Vercel":{
-    "about": "These are some of the things I did to help me learn how to use Vercel"
+    "about": "Vercel is a platform that allows for instant deployment of static webpages. It is hosting this webpage right now! It is a great way to quickly deploy a simple site or to work on a site during development as there is also Github integration.",
+    "visitURL": "https://vercel.com",
+    "visitMessage": "Check out Vercel's website here"
   },
   "ThisSite":{
-    "about": "I built this website using Vercel and angular..."
+    "about": "I built this website using Vercel and angular...",
+    "visitURL": "https://github.com/ebweinberger/eliWeinbergerWebsite",
+    "visitMessage": "Check out the repository on Github here"
   },
   "Heatmap":{
-    "about": "This project is still being built. It will be a heatmap of social media activity. I any location data available that is attached to individual posts and drop a pin on the map where that post took place."
+    "about": "This project is still being built. It will be a heatmap of social media activity. I any location data available that is attached to individual posts and drop a pin on the map where that post took place. Right now I have built a python script that gets tweet location information and plots it using logitude and latitude. I plan to create a nice front end for it using p5js and possibly load it to a raspberry pi to use as a dynamic art piece."
   }
 }
