@@ -36,8 +36,8 @@ export class ProjectComponent implements OnInit {
       case "heatmap":
         this.projectName = "Social Media Heat Map";
         this.projectAbout = projectData.Heatmap.about;
-        this.visitURL = projectData.Heatmap.visitURL;
-        this.visitMessage = projectData.Heatmap.visitMessage;
+        // this.visitURL = projectData.Heatmap.visitURL;
+        // this.visitMessage = projectData.Heatmap.visitMessage;
         break;
       case "thissite":
         this.projectName = "This Website";
