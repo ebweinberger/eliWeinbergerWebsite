@@ -57,18 +57,32 @@
   width: 200px;
   margin-right: 100px;
   /* background-color: grey; */
-  /* padding: 20px; */
+  padding: 20px 0 20px 20px;
   border-right: 1px solid #c2c2c2;
 }
 
 .side-bar h2{
   margin-bottom: 10px;
+  padding-left: 5px;
 }
 
 hr{
   width: 90px;
   margin-bottom: 10px;
   /* border-top: 1px solid #c2c2c2; */
+}
+
+.home{
+  display: flex;
+  padding: 10px 0 10px 0px;
+  transition: .7s;
+  cursor: pointer;
+  outline: none;
+}
+
+.home:hover{
+  background-color: #f4edfa;
+  transition: .3s;
 }
 .side-bar-item{
   font-size: 20px;
@@ -78,7 +92,7 @@ hr{
 }
 
 .side-bar-item:hover{
-  background-color: #e6d5ed;
+  background-color: #f4edfa;
   transition: .3s;
 }
 
@@ -86,5 +100,5 @@ hr{
 .component-container{
   /* background-color: red; */
   flex: 1;
-  padding: 20px;
+  padding: 10px;
 }

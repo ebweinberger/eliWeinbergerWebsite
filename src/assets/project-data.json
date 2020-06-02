@@ -1,0 +1,14 @@
+{
+  "Speckles":{
+    "about": "Speckles is a small artisitc project that I made to help me learn p5js and vercel. You can visit it at"
+  },
+  "Vercel":{
+    "about": "These are some of the things I did to help me learn how to use Vercel"
+  },
+  "ThisSite":{
+    "about": "I built this website using Vercel and angular..."
+  },
+  "Heatmap":{
+    "about": "This project is still being built. It will be a heatmap of social media activity. I any location data available that is attached to individual posts and drop a pin on the map where that post took place."
+  }
+}

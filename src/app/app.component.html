@@ -16,16 +16,17 @@
 <div class="content-container">
   <div class="content">
     <div class="side-bar">
+      <h2 routerLink="/" routerLinkActive="active" class="home">Home</h2>
       <h2>Projects</h2>
       <hr noshade size="1" color="#c2c2c2">
-      <a href="http://www.google.com" class="side-bar-item">Speckles</a>
-      <a href="#" class="side-bar-item">Vercel</a>
-      <a href="#" class="side-bar-item">Heat Map</a>
-      <a href="#" class="side-bar-item">This Site</a>
+      <a routerLink="/speckles" routerLinkActive="active" class="side-bar-item">Speckles</a>
+      <a routerLink="/vercel" routerLinkActive="active" class="side-bar-item">Vercel</a>
+      <a routerLink="/heatmap" routerLinkActive="active" class="side-bar-item">Heat Map</a>
+      <a routerLink="thissite" routerLinkActive="active" class="side-bar-item">This Site</a>
 
     </div>
     <div class="component-container">
-      <h2>this is a component</h2>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
