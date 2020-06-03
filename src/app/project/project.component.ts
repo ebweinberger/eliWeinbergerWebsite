@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import projectData from '../../assets/project-data.json';
-import * as md from 'raw-loader!../../assets/markdown/speckles.md';
+import * as speck from 'raw-loader!../../assets/markdown/speckles.md';
+import * as verc from 'raw-loader!../../assets/markdown/vercel.md';
 
 @Component({
   selector: 'app-project',
@@ -22,34 +22,21 @@ export class ProjectComponent implements OnInit {
   ngOnInit() {
     switch (this.route.snapshot.routeConfig.path) {
       case "speckles":
-        // this.projectName = "Speckles";
-        // this.projectAbout = projectData.Speckles.about;
-        this.projectMD = marked(md.default);
-        this.visitURL = projectData.Speckles.visitURL;
-        this.visitMessage = projectData.Speckles.visitMessage;
+        this.projectMD = marked(speck.default);
         break;
 
       case "vercel":
-        this.projectName = "Vercel";
-        this.projectAbout = projectData.Vercel.about;
-        this.visitURL = projectData.Vercel.visitURL;
-        this.visitMessage = projectData.Vercel.visitMessage;
+        this.projectMD = marked(verc.default);
         break;
 
       case "heatmap":
-        this.projectName = "Social Media Heat Map";
-        this.projectAbout = projectData.Heatmap.about;
-        // this.visitURL = projectData.Heatmap.visitURL;
-        // this.visitMessage = projectData.Heatmap.visitMessage;
+
         break;
       case "thissite":
-        this.projectName = "This Website";
-        this.projectAbout = projectData.ThisSite.about;
-        this.visitURL = projectData.ThisSite.visitURL;
-        this.visitMessage = projectData.ThisSite.visitMessage;
+
         break;
       default:
-        this.projectName = "Not Found";
+        
         break;
     }
   }

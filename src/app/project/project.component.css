@@ -6,8 +6,12 @@
   padding-bottom: 20px;;
 }
 
-:host ::ng-deep h2, ::ng-deep h3{
-  padding: 20px 0 20px 10px;
+:host ::ng-deep h2{
+  padding: 20px 0 20px 0px;
+}
+
+:host ::ng-deep h3{
+  padding: 10px 0 10px 10px;
 }
 
 :host ::ng-deep a{
