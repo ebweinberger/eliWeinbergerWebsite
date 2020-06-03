@@ -59,7 +59,6 @@ a{
   flex:initial;
   width: 200px;
   margin-right: 100px;
-  /* background-color: grey; */
   padding: 20px 0 20px 20px;
   border-right: 1px solid #c2c2c2;
 }
@@ -72,7 +71,6 @@ a{
 hr{
   width: 90px;
   margin-bottom: 10px;
-  /* border-top: 1px solid #c2c2c2; */
 }
 
 .home{
@@ -101,7 +99,6 @@ hr{
 
 
 .component-container{
-  /* background-color: red; */
   flex: 1;
   padding: 10px;
 }
