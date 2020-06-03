@@ -17,6 +17,7 @@
   background-color: #f4edfa;
   margin-right: auto;
   transition: .7s;
+  color: #9842f5;
 }
 
 :host ::ng-deep a:hover{
