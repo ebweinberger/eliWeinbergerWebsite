@@ -1,3 +1,7 @@
+a{
+  color: #333333;
+}
+
 .header-container{
   display: flex;
   justify-content: center;

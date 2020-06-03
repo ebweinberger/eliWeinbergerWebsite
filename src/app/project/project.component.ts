@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import projectData from '../../assets/project-data.json';
+import * as md from 'raw-loader!../../assets/markdown/speckles.md';
 
 @Component({
   selector: 'app-project',
@@ -16,12 +17,14 @@ export class ProjectComponent implements OnInit {
   projectAbout: string;
   visitURL: string;
   visitMessage: string;
+  projectMD: string;
 
   ngOnInit() {
     switch (this.route.snapshot.routeConfig.path) {
       case "speckles":
-        this.projectName = "Speckles";
-        this.projectAbout = projectData.Speckles.about;
+        // this.projectName = "Speckles";
+        // this.projectAbout = projectData.Speckles.about;
+        this.projectMD = marked(md.default);
         this.visitURL = projectData.Speckles.visitURL;
         this.visitMessage = projectData.Speckles.visitMessage;
         break;

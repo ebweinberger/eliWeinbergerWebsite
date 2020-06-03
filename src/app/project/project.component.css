@@ -1,10 +1,57 @@
-p{
+*{
   line-height: 150%;
+}
+
+:host ::ng-deep h1{
+  padding-bottom: 20px;;
+}
+
+:host ::ng-deep h2, ::ng-deep h3{
+  padding: 20px 0 20px 10px;
+}
+
+:host ::ng-deep a{
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f4edfa;
+  margin-right: auto;
+  transition: .7s;
+}
+
+:host ::ng-deep a:hover{
+  background-color: #e7e1ed;
+  transition: .3s;
+}
+
+:host ::ng-deep p{
+  padding: 10px 0 10px 15px;
+}
+
+:host ::ng-deep ul{
+  padding-right: 10px;
+}
+
+:host ::ng-deep img{
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+
+:host ::ng-deep code{
+  font-family: monospace;
+  font-size: 16px;
+  background-color: #d9d7cc;
+  padding: 0 4px 0 4px;
+  border-radius: 3px;
 }
 
 .content-container{
   display: flex;
   flex-direction: column;
+}
+
+.content-container a{
+  color: #f4edfa;
 }
 
 .visit{
