@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import * as speck from 'raw-loader!../../assets/markdown/speckles.md';
 import * as verc from 'raw-loader!../../assets/markdown/vercel.md';
+import * as site from 'raw-loader!../../assets/markdown/thissite.md';
 
 @Component({
   selector: 'app-project',
@@ -33,10 +34,10 @@ export class ProjectComponent implements OnInit {
 
         break;
       case "thissite":
-
+        this.projectMD = marked(site.default);
         break;
       default:
-        
+
         break;
     }
   }
