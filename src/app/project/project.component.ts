@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import * as speck from 'raw-loader!../../assets/markdown/speckles.md';
 import * as verc from 'raw-loader!../../assets/markdown/vercel.md';
 import * as site from 'raw-loader!../../assets/markdown/thissite.md';
+import * as heat from 'raw-loader!../../assets/markdown/heatmap.md';
 
 @Component({
   selector: 'app-project',
@@ -31,13 +32,13 @@ export class ProjectComponent implements OnInit {
         break;
 
       case "heatmap":
-
+        this.projectMD = marked(heat.default);
         break;
       case "thissite":
         this.projectMD = marked(site.default);
         break;
       default:
-
+        this.projectMD = marked("# Hi! It looks like you are trying to view this website! Do you want help with that? Try clicking on the 'Home' option!")
         break;
     }
   }

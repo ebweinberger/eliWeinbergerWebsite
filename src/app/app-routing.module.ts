@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: "speckles", component: ProjectComponent},
   {path: "vercel", component: ProjectComponent},
   {path: "heatmap", component: ProjectComponent},
-  {path: "thissite", component: ProjectComponent}
+  {path: "thissite", component: ProjectComponent},
+  // {path: **, component: HomeComponent}
 ];
 
 @NgModule({

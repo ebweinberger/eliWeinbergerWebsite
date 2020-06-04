@@ -3,13 +3,17 @@
   flex-direction: column;
 }
 
-h1, h2{
-  padding-top: 20px;
+h1{
   padding-bottom: 20px;
+}
+
+h2{
+  padding: 20px 0 20px 0px;
 }
 
 p{
   line-height: 150%;
+  padding: 10px 0 10px 15px;
 }
 
 a{
