@@ -28,6 +28,11 @@ a{
   font-size: 50px;
 }
 
+.logo{
+  height: 100px;
+  width: 100px;
+}
+
 .personal-info-container{
   display: flex;
   flex-direction: column;
@@ -101,4 +106,76 @@ hr{
 .component-container{
   flex: 1;
   padding: 10px;
+}
+
+
+/* Responsive design rules apply when the display is less than 700px */
+@media screen and (max-width: 800px) {
+
+  p{
+    font-size: 10px;
+  }
+
+  h1{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 14px;
+  }
+
+  h3{
+    font-size: 12px;
+  }
+
+  .header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .name-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .name{
+    font-size: 30px;
+  }
+
+  .logo{
+    height: 75px;
+    width: 75px;
+    padding-bottom: 10px;
+  }
+
+  .personal-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0 0 0;
+  }
+
+  .personal-info-container p{
+    margin: 5px;
+    color: #4a4a4a;
+    font-size: 14px;
+  }
+
+  .side-bar{
+    display: none;
+  }
 }

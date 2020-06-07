@@ -10,7 +10,7 @@ python and uses Twitter API.
 ## tweepy
 Tweepy is the python library that allows me to easily access Twitter API. Using
 tweepy I opened up a `StreamListener` that continuously listens to all incoming
-tweets. The tweets come in as .json that have a `status._json['geo']['coordinates']`
+tweets. The tweets come in as JSON that have a `status._json['geo']['coordinates']`
 property. The `coordinates` property is an array of two items: lattitude and longitude.
 I filter out any tweets that don't have a `geo` property and use the lattitude and
 longitude of those that do to plot a point on a map.

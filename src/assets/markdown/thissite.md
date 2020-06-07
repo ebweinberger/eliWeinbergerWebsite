@@ -1,5 +1,5 @@
 # This Website
-This website is built using Angular. I learned quite a few things about angular
+This website is built using Angular. I learned quite a few things about Angular
 in the process. I have previous experience building node.js apps from scratch so
 I found switching to Angular pretty fun. It really takes away a lot of the headaches
 after you beat the learning curve.
@@ -15,11 +15,11 @@ a few iterations before I got it how I like it.
 I originally had discovered Angular templates and wanted to use those to render
 the information for each project. To do this I made an HTML template using the
 `{{ variableName }}` interpolation notation and stored the project information as
-strings in a .json. I then had to learn how to read from .json in an Angular component.
+strings in JSON. I then had to learn how to read JSON in an Angular component.
 After some googling I found that I needed to enable `resolveJsonModule` and `esModuleInterop`
-in `tsconfig.json` which allowed me to make a .json object in the `component.ts`
+in `tsconfig.json` which allowed me to make a JSON object in the `component.ts`
 file. I could then simply set `variableName` to `json.myExampleProperty` and it would render the
-string from the .json into the HTML.
+string from JSON into the HTML.
 
 After messing around with it a bit and seeing how things looked on the page, I
 realized that it would be quite a bit of work to create an HTML template that I could
@@ -28,7 +28,7 @@ inline conditional, `*ngIf`, and while that worked I decided it would be easier 
 make more sense to take a different approach.
 
 ### Second Iteration of `ProjectComponent`
-I decided to abandon the .json approach all together and instead looked for a way to
+I decided to abandon the JSON approach all together and instead looked for a way to
 render markdown. I found the marked.js library which takes a string of markdown text and
 converts it into HTML. I then had to learn how to use third party libraries in an Angular
 project. This was a little tricky for me and took me some time but I eventually I found
@@ -59,7 +59,7 @@ home, the router displays the `HomeComponent`. All other routes on this website 
 the `ProjectComponent` which has it's own logic as to which project it displays.  
 
 ## Services
-From the Agular documentation I learned that the best practice is to make sure that
+From the Angular documentation I learned that the best practice is to make sure that
 the logic in the component only affects the way things are displayed, not what the
 actual content is. Initially I had logic in the `ProjectComponent` that decided what
 markdown file to pull the information from. After I got it functioning, I decided to
