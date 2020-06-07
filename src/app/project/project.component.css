@@ -73,32 +73,32 @@
 @media screen and (max-width: 800px) {
 
   *{
-    line-height: 100%;
+    line-height: 120%;
   }
 
   :host ::ng-deep p{
-    font-size: 10px;
+    font-size: 14px;
   }
 
   :host ::ng-deep h1{
-    font-size: 16px;
+    font-size: 20px;
     padding-bottom: 10px;
   }
 
   :host ::ng-deep h2{
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px 0 10px 0px;
 
   }
 
   :host ::ng-deep h3{
-    font-size: 13px;
+    font-size: 16px;
     padding: 5px 0 5px 5px;
 
   }
 
   :host ::ng-deep code{
-    font-size: 10px;
+    font-size: 13px;
   }
 
   :host ::ng-deep img{
@@ -106,7 +106,7 @@
   }
 
   :host ::ng-deep li{
-    font-size: 10px;
+    font-size: 14px;
   }
 
 }

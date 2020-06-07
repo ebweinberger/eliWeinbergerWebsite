@@ -113,19 +113,19 @@ hr{
 @media screen and (max-width: 800px) {
 
   p{
-    font-size: 10px;
-  }
-
-  h1{
-    font-size: 16px;
-  }
-
-  h2{
     font-size: 14px;
   }
 
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 18px;
+  }
+
   h3{
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .header-container{
