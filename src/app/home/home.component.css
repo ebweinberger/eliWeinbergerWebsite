@@ -19,8 +19,38 @@ p{
 a{
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
-  background-color: #f4edfa;
   border-radius: 10px;
+  background-color: #f4edfa;
   margin-right: auto;
+  transition: .7s;
   color: #9842f5;
+  text-align: center;
+}
+
+a:hover{
+  background-color: #e7e1ed;
+  transition: .3s;
+}
+
+@media screen and (max-width: 800px) {
+
+  *{
+    line-height: 120%;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  h2{
+    font-size: 18px;
+    padding: 10px 0 10px 0px;
+
+  }
+
 }

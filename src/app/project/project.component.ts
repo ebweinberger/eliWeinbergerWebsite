@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import * as speck from 'raw-loader!../../assets/markdown/speckles.md';
-import * as verc from 'raw-loader!../../assets/markdown/vercel.md';
-import * as site from 'raw-loader!../../assets/markdown/thissite.md';
-import * as heat from 'raw-loader!../../assets/markdown/heatmap.md';
+import { GetmdService} from '../getmd.service';
 
 @Component({
   selector: 'app-project',
@@ -13,34 +9,17 @@ import * as heat from 'raw-loader!../../assets/markdown/heatmap.md';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private getmd: GetmdService) { }
 
-  projectName: string;
-  projectAbout: string;
-  visitURL: string;
-  visitMessage: string;
-  projectMD: string;
+  projectMDstr: string;
+  projectMDhtml: string;
+  currRoute: string;
+
 
   ngOnInit() {
-    switch (this.route.snapshot.routeConfig.path) {
-      case "speckles":
-        this.projectMD = marked(speck.default);
-        break;
-
-      case "vercel":
-        this.projectMD = marked(verc.default);
-        break;
-
-      case "heatmap":
-        this.projectMD = marked(heat.default);
-        break;
-      case "thissite":
-        this.projectMD = marked(site.default);
-        break;
-      default:
-        this.projectMD = marked("# Hi! It looks like you are trying to view this website! Do you want help with that? Try clicking on the 'Home' option!")
-        break;
-    }
+    this.currRoute = this.route.snapshot.routeConfig.path;
+    this.projectMDstr = this.getmd.getMD(this.currRoute);
+    this.projectMDhtml = marked(this.projectMDstr);
   }
 
 }
