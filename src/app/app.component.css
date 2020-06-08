@@ -108,6 +108,22 @@ hr{
   padding: 10px;
 }
 
+.menu-button {
+  display: none;
+  z-index: 2;
+}
+
+.fade{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* display: none; */
+}
+
 
 /* Responsive design rules apply when the display is less than 700px */
 @media screen and (max-width: 800px) {
@@ -128,6 +144,19 @@ hr{
     font-size: 16px;
   }
 
+  .menu-button{
+    display: flex;
+    margin-right: auto;
+    padding: 10px 0 0 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .fade{
+    background-color: rgba(0, 0, 0, .5);
+
+  }
   .header-container{
     display: flex;
     flex-direction: column;
@@ -140,7 +169,7 @@ hr{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 0px;
     padding-bottom: 10px;
   }
 
@@ -176,6 +205,13 @@ hr{
   }
 
   .side-bar{
-    display: none;
+    background-color: #faf8ed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    transition: .5;
   }
+
 }
