@@ -1,10 +1,11 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'eliWeinbergerWebsite';
@@ -18,8 +19,10 @@ export class AppComponent {
 
     if(window.innerWidth > 800){
       this.sidebarStatus = true;
+      this.mobile = false;
     }else{
       this.sidebarStatus = false;
+      this.mobile = true;
     }
   }
 
@@ -42,5 +45,8 @@ export class AppComponent {
   sidebarOff(){
     this.sidebarStatus = false;
     this.fade = false;
+    console.log("help");
   }
+
+
 }

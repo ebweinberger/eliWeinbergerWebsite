@@ -17,6 +17,7 @@ a{
 }
 
 .name-container{
+  padding-left: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,7 +148,7 @@ hr{
   .menu-button{
     display: flex;
     margin-right: auto;
-    padding: 10px 0 0 10px;
+    padding: 30px 30px 30px 30px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -212,6 +213,10 @@ hr{
     z-index: 20;
     height: 100%;
     transition: .5;
+  }
+
+  .side-bar a{
+    font-size: 18px;
   }
 
 }
