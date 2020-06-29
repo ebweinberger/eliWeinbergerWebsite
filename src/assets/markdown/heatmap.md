@@ -59,3 +59,10 @@ This eventually leads to the dot being completely transparent which is when the 
 deleted from the array.
 
 [See the Heat Map on Github](https://github.com/ebweinberger/heatMap)
+
+## Demo  
+
+I am still ironing out the kinks in the backend so if for any reason the website is not working
+please view this demo of what it looks like in action on YouTube.
+
+[Go to Video Demo](https://www.youtube.com/watch?v=gsZC22V3G1A)
