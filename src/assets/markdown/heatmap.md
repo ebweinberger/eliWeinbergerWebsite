@@ -1,43 +1,59 @@
 # Social Media Heat Map
+![Heat Map](../../assets/images/newHeatMapScreenshot.png)
 
-![Heat Map](../../assets/images/HeatMapScreenShot.png)
+The main idea behind this project was to create a visualization of live Twitter
+activity. The heat map shows all live tweets that have a geo-tagged location.
 
-The aim of this project is to create a live heat map of social media posts in a
-specified area. The map should place a dot or a pin whenever a post is made that
-has location information attached to it. The current working code is written in
-python and uses Twitter API.
+[Check Out the Heat Map](https://twitterheatmap.now.sh)
 
-## tweepy
-Tweepy is the python library that allows me to easily access Twitter API. Using
-tweepy I opened up a `StreamListener` that continuously listens to all incoming
-tweets. The tweets come in as JSON that have a `status._json['geo']['coordinates']`
-property. The `coordinates` property is an array of two items: lattitude and longitude.
-I filter out any tweets that don't have a `geo` property and use the lattitude and
-longitude of those that do to plot a point on a map.
+##Proof of Concept
 
-## matplotlib
-As of right now I have a very basic display of the plotted points. To do this I
-used matplotlib to create a plot. The plot needs to be set up to have a fitting
-x and y axis. For instance, if I want to plot New York City only, I need to adjust
-the x and y axis to start at the longitude and lattitude that correlate with the
-south-west corner of the city. As of now I have it set up to plot the entire United States
-(including bits of Canada and Mexico). Then I just plug in the longitude and lattitude
-as the x and y coordinates.
+![Heat Map](../../assets/images/oldHeatMapScreenshot.png)
+I started this project by creating a proof of concept in python. It used the tweepy
+library to access Twitter API and matplotlib to plot the coordinates of the tweets.
+The above picture is the result of the proof of concept running for around an hour.
 
-You can see in the above picture what the plot looks like after some time running.
-I think it is really cool that you can see an outline of the United States and where
-the hotspots are like New York City, Los Angeles, San Fransisco, and Seattle.
+##Migration to JavaScript
 
-## Future Plans
-I plan to build out this project much further. I would like to build a nice front
-end for it in p5js where the plotting could have more logic behind it. I need to
-decide exactly how I want it to work but the points should disappear after some time
-and maybe an area that is seeing increased activity will begin to turn red.
+At first I thought it would be easiest to make a flask server to run my original
+python streaming script and connect it to a JavaScript front end. After a short time
+I realized that this would have too many moving parts to keep track of. Instead I decided
+to start from scratch and learn how to access Twitter API in JavaScript.
 
-I also have this idea in my head to make it into some sort of dynamic wall art.
-I can load the whole thing onto a raspberry pi and buy an old parted out laptop
-monitor and hang it on the wall. Or, if I can afford it, I think it would be
-cool to get it running on an e-ink display.
+### Accessing Twitter API
 
-I will keep this page updated with the progress that I make on this project. If
-you have any cool ideas, shoot me an email!
+The task of authenticating and accessing Twitter API was not as easy as I wanted
+it to be. I found the Twitter API docs to be unorganized and hard to read. Eventually
+I did figure out how to do it but it took me much longer than expected.  
+
+To access Twitter API I generate a bearer token using my API keys and then build a
+`config` object that holds my desired endpoint and authentication token. I then use
+`request.get(cofig)` to send my request to Twitter API. Because the endpoint that I am
+accessing is a stream, the request I send does not send a packet of data but opens
+up a long term connection. I can then listen to this connection using the `on()` callback.  
+
+The stream runs on an AWS EC2 Ubuntu instance. Because I do not want the stream to be
+running all the time and use up my various limits, I made it so that the stream only
+starts when the webpage is loaded and is closed when the webpage is closed.
+
+### Processing Data
+
+In the request I make to Twitter API, included in the query is `expansions=geo.place_id`.
+This is because the default response does not contain location data to the specificity
+that I need. What this query does is give me another root level complementary object, `expansions`,
+that contains the geo information of the tweet (if it exists). From there I can easily
+pull out the longitude, latitude, and place name fields which I then put into a list
+and send it to the front end using Pusher
+
+### p5js Front End
+
+The front end of the heat map is written in JavaScript using the p5js library and is hosted on vercel.
+In the `setup()` function I subscribe to the `heat-map` channel with Pusher which listens for `tweet` events.
+When a `tweet` event occurs, I create a new `tweet` object that contains its coordinates, time
+it was created, and initial size. I then add the tweet to the beginning of `tweets[]`.
+In the `draw()` function I draw a dot on the map for every tweet in `tweets[]`. While
+iterating through `tweets[]` I also reduce the transparency value of the dot by one step.
+This eventually leads to the dot being completely transparent which is when the tweet gets
+deleted from the array.
+
+[See the Heat Map on Github](https://github.com/ebweinberger/heatMap)
