@@ -1,4 +1,4 @@
-# Social Media Heat Map
+# Twitter Heat Map
 ![Heat Map](../../assets/images/newHeatMapScreenshot.png)
 
 The main idea behind this project was to create a visualization of live Twitter
@@ -6,14 +6,16 @@ activity. The heat map shows all live tweets that have a geo-tagged location.
 
 [Check Out the Heat Map](https://twitterheatmap.now.sh)
 
-##Proof of Concept
+## Proof of Concept
 
-![Heat Map](../../assets/images/oldHeatMapScreenshot.png)
 I started this project by creating a proof of concept in python. It used the tweepy
 library to access Twitter API and matplotlib to plot the coordinates of the tweets.
-The above picture is the result of the proof of concept running for around an hour.
+This picture is the result of the proof of concept running for around an hour.  
 
-##Migration to JavaScript
+![Heat Map](../../assets/images/oldHeatMapScreenshot.png)
+
+
+## Migration to JavaScript
 
 At first I thought it would be easiest to make a flask server to run my original
 python streaming script and connect it to a JavaScript front end. After a short time
@@ -38,7 +40,7 @@ starts when the webpage is loaded and is closed when the webpage is closed.
 
 ### Processing Data
 
-In the request I make to Twitter API, included in the query is `expansions=geo.place_id`.
+Within the query I make to Twitter API is the `expansions=geo.place_id` tag.
 This is because the default response does not contain location data to the specificity
 that I need. What this query does is give me another root level complementary object, `expansions`,
 that contains the geo information of the tweet (if it exists). From there I can easily
