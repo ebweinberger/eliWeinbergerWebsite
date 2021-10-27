@@ -1,7 +1,7 @@
 # Speckles
 
 ![Speckles](../../assets/images/SpecklesScreenShot.png)
-Speckles is a small artisitc project that I made to help me learn p5js and vercel.  
+Speckles is a small artisitc project that I made to help me learn p5js and Vercel.  
 
 [Visit speckles.now.sh](https://speckles.now.sh)
 

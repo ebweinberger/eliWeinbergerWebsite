@@ -18,13 +18,18 @@
   <div class="content-container">
     <div class="content">
       <div class="side-bar" *ngIf="sidebarStatus">
-        <h2 routerLink="/" routerLinkActive="active" class="home" (click)=" this.mobile? this.sidebarOff(): ''">Home</h2>
+        <h2 routerLink="/" routerLinkActive="active" class="home" (click)=" this.mobile? this.sidebarOff(): ''">Home
+        </h2>
         <h2>Projects</h2>
         <hr noshade size="1" color="#c2c2c2">
-        <a routerLink="/thissite" routerLinkActive="active" class="side-bar-item" (click)=" this.mobile? this.sidebarOff(): ''">This Site</a>
-        <a routerLink="/speckles" routerLinkActive="active" class="side-bar-item" (click)=" this.mobile? this.sidebarOff(): ''">Speckles</a>
-        <a routerLink="/heatmap" routerLinkActive="active" class="side-bar-item" (click)=" this.mobile? this.sidebarOff(): ''">Heat Map</a>
-        <a routerLink="/vercel" routerLinkActive="active" class="side-bar-item" (click)=" this.mobile? this.sidebarOff(): ''">Vercel</a>
+        <a routerLink="/heatmap" routerLinkActive="active" class="side-bar-item"
+          (click)=" this.mobile? this.sidebarOff(): ''">Heat Map</a>
+        <a routerLink="/thissite" routerLinkActive="active" class="side-bar-item"
+          (click)=" this.mobile? this.sidebarOff(): ''">This Site</a>
+        <a routerLink="/vercel" routerLinkActive="active" class="side-bar-item"
+          (click)=" this.mobile? this.sidebarOff(): ''">Vercel</a>
+        <a routerLink="/speckles" routerLinkActive="active" class="side-bar-item"
+          (click)=" this.mobile? this.sidebarOff(): ''">Speckles</a>
       </div>
       <div class="component-container">
         <router-outlet></router-outlet>

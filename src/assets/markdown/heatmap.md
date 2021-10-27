@@ -1,6 +1,14 @@
 # Twitter Heat Map
 ![Heat Map](../../assets/images/newHeatMapScreenshot.png)
 
+## Video Demo  
+
+Unfortunately I ran out of AWS free tier so I am no longer running this project. But you can check out what it looked like in this video!
+
+[Go to Video Demo](https://www.youtube.com/watch?v=gsZC22V3G1A)
+
+## About
+
 The main idea behind this project was to create a visualization of live Twitter
 activity. The heat map shows all live tweets that have a geo-tagged location.
 
@@ -59,10 +67,3 @@ This eventually leads to the dot being completely transparent which is when the 
 deleted from the array.
 
 [See the Heat Map on Github](https://github.com/ebweinberger/heatMap)
-
-## Demo  
-
-I am still ironing out the kinks in the backend so if for any reason the website is not working
-please view this demo of what it looks like in action on YouTube.
-
-[Go to Video Demo](https://www.youtube.com/watch?v=gsZC22V3G1A)
